@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PureCinema", "PureCinema\PureCinema.csproj", "{DE723CC0-7CDE-4394-955E-A680665E28F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PureCinema.DataAccess", "PureCinema.DataAccess\PureCinema.DataAccess.csproj", "{F00AB9CA-1AC2-45E0-90F1-279B028986E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PureCinema.Business", "PureCinema.Business\PureCinema.Business.csproj", "{0A08CA66-1253-4239-B6F5-9243027F5D7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE723CC0-7CDE-4394-955E-A680665E28F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE723CC0-7CDE-4394-955E-A680665E28F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE723CC0-7CDE-4394-955E-A680665E28F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE723CC0-7CDE-4394-955E-A680665E28F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F00AB9CA-1AC2-45E0-90F1-279B028986E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F00AB9CA-1AC2-45E0-90F1-279B028986E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F00AB9CA-1AC2-45E0-90F1-279B028986E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F00AB9CA-1AC2-45E0-90F1-279B028986E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A08CA66-1253-4239-B6F5-9243027F5D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A08CA66-1253-4239-B6F5-9243027F5D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A08CA66-1253-4239-B6F5-9243027F5D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A08CA66-1253-4239-B6F5-9243027F5D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
