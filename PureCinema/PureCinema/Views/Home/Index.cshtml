@@ -1,13 +1,16 @@
-﻿@model List<PureCinema.DataAccess.Models.Movie>
+﻿@model List<PureCinema.DataAccess.DTO.MovieDTO>
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Movie List";
 }
 
-<table class="table table-bordered">
+<h2>Movie list</h2>
+
+<table class="movies table table-bordered">
     <thead>
         <tr>
             <th>Title</th>
             <th>Description</th>
+            <th>Choose Time</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +19,12 @@
             <tr>
                 <td>@movie.Title</td>
                 <td>@movie.Description</td>
+                <td>
+                    @foreach (var showTime in movie.ShowTimes)
+                    {
+                        @Html.ActionLink(showTime.StartTime.ToString("hh':'mm"), "ChooseSeat", new { movieRoomRelationId = showTime.MovieRoomRelationId })
+                    }
+                </td>
             </tr>
         }
     </tbody>
