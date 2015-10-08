@@ -9,17 +9,19 @@ namespace PureCinema.DataAccess.Repositories
     {
         public List<MovieDTO> GetMovies(DateTime start)
         {
-            var context = new CinemaContext();
-            return context.Movies.Select(m => new MovieDTO
+            using (var context = new CinemaContext())
             {
-                Title = m.Title,
-                Description = m.Description,
-                ShowTimes = m.RoomRelations.Select(r => new SeanseDTO
+                return context.Movies.Select(m => new MovieDTO
                 {
-                    MovieRoomRelationId = r.MovieRoomRelationId,
-                    StartTime = r.StartTime
-                }).ToList()
-            }).ToList();
+                    Title = m.Title,
+                    Description = m.Description,
+                    ShowTimes = m.RoomRelations.Select(r => new SeanseDTO
+                    {
+                        MovieRoomRelationId = r.MovieRoomRelationId,
+                        StartTime = r.StartTime
+                    }).ToList()
+                }).ToList();
+            }
         }
     }
 }

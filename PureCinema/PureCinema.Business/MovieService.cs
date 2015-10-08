@@ -24,6 +24,13 @@ namespace PureCinema.Business
         public bool ReserveSeat(int userId, int movieRoomRelationId, int row, int seatNumber)
         {
             IRoomRepository repository = new EfRoomRepository();
+            List<INotificationSender> notifiers = new List<INotificationSender>
+            {
+                new EmailNotificationSender(),
+                new SmsNotificationSender(),
+                new ApplicationNotificationSender()
+            };
+
             MovieRoomRelation relation = repository.GetRelation(movieRoomRelationId);
 
             if (relation == null)
@@ -58,6 +65,18 @@ namespace PureCinema.Business
                 SeatNumber = seatNumber,
                 UserId = userId
             });
+
+            foreach(var notifier in notifiers)
+            {
+                try
+                {
+                    notifier.NotifyReservationReady(userId, row, seatNumber);
+                }
+                catch(Exception e)
+                {
+                    // log 
+                }
+            }
 
             return true;
         }

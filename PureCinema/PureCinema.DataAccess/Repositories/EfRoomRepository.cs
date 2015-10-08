@@ -45,6 +45,6 @@ namespace PureCinema.DataAccess.Repositories
                         SeatRow = sa.Row
                     }).ToList()
                 }).FirstOrDefault();
-        }        
+        }
     }
 }

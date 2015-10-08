@@ -11,5 +11,6 @@ namespace PureCinema.DataAccess
         public DbSet<User> Users { get; set; }
         public DbSet<MovieRoomRelation> RoomRelations { get; set; }
         public DbSet<SeatAssignment> SeatAssignments { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
     }
 }
