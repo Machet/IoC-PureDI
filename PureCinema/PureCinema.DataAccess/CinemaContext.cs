@@ -6,6 +6,7 @@ namespace PureCinema.DataAccess
 {
 	public class CinemaContext : DbContext
 	{
+		public DbSet<AuditLog> AuditLogs { get; set; }
 		public DbSet<Movie> Movies { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<User> Users { get; set; }

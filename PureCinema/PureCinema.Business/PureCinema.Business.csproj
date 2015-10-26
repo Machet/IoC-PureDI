@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuditLogging\AuditLogger.cs" />
     <Compile Include="Notifications\ApplicationNotificationSender.cs" />
     <Compile Include="Notifications\EmailNotificationSender.cs" />
     <Compile Include="Notifications\INotificationSender.cs" />
@@ -52,6 +53,7 @@
       <Name>PureCinema.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
