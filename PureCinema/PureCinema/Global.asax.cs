@@ -15,6 +15,7 @@ namespace PureCinema
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Database.SetInitializer(new CinemaDbInitializer());
+            ControllerBuilder.Current.SetControllerFactory(new PureControllerFactory());
         }
     }
 }

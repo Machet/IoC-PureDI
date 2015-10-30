@@ -5,9 +5,16 @@ namespace PureCinema.DataAccess.Sms
 {
     public class MyMobileSmsSender : ISmsSender
     {
+        private INotificationRepository _notificationRepository;
+
+        public MyMobileSmsSender(INotificationRepository notificicationRepository)
+        {
+            _notificationRepository = notificicationRepository;
+        }
+
         public void Send(SmsSettings settings)
         {
-            new EfNotificationRepository().Add(new Notification
+            _notificationRepository.Add(new Notification
             {
                 Text = "Sms send."
             });

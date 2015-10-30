@@ -5,9 +5,16 @@ namespace PureCinema.DataAccess.Smtp
 {
     public class NetMailSender : IMailSender
     {
+        private INotificationRepository _notificationRepository;
+
+        public NetMailSender(INotificationRepository notificicationRepository)
+        {
+            _notificationRepository = notificicationRepository;
+        }
+
         public void Send(MailSettings content)
         {
-            new EfNotificationRepository().Add(new Notification
+            _notificationRepository.Add(new Notification
             {
                 Text = "Email send."
             });

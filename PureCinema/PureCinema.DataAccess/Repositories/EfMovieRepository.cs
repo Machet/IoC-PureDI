@@ -7,21 +7,25 @@ namespace PureCinema.DataAccess.Repositories
 {
     public class EfMovieRepository : IMovieRepository
     {
+        private readonly CinemaContext _context;
+
+        public EfMovieRepository(CinemaContext context)
+        {
+            _context = context;
+        }
+
         public List<MovieDTO> GetMovies(DateTime start)
         {
-            using (var context = new CinemaContext())
+            return _context.Movies.Select(m => new MovieDTO
             {
-                return context.Movies.Select(m => new MovieDTO
+                Title = m.Title,
+                Description = m.Description,
+                ShowTimes = m.RoomRelations.Select(r => new SeanseDTO
                 {
-                    Title = m.Title,
-                    Description = m.Description,
-                    ShowTimes = m.RoomRelations.Select(r => new SeanseDTO
-                    {
-                        MovieRoomRelationId = r.MovieRoomRelationId,
-                        StartTime = r.StartTime
-                    }).ToList()
-                }).ToList();
-            }
+                    MovieRoomRelationId = r.MovieRoomRelationId,
+                    StartTime = r.StartTime
+                }).ToList()
+            }).ToList();
         }
     }
 }

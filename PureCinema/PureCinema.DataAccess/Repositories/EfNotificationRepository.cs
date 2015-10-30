@@ -4,13 +4,17 @@ namespace PureCinema.DataAccess.Repositories
 {
     public class EfNotificationRepository : INotificationRepository
     {
+        private readonly CinemaContext _context;
+
+        public EfNotificationRepository(CinemaContext context)
+        {
+            _context = context;
+        }
+
         public void Add(Notification notification)
         {
-            using (var context = new CinemaContext())
-            {
-                context.Notifications.Add(notification);
-                context.SaveChanges();
-            }
+            _context.Notifications.Add(notification);
+            _context.SaveChanges();
         }
     }
 }

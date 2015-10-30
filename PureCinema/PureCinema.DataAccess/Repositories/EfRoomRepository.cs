@@ -8,9 +8,9 @@ namespace PureCinema.DataAccess.Repositories
     {
         private CinemaContext _context;
 
-        public EfRoomRepository()
+        public EfRoomRepository(CinemaContext context)
         {
-            _context = new CinemaContext();
+            _context = context;
         }
 
         public void Add(SeatAssignment seatAssignment)

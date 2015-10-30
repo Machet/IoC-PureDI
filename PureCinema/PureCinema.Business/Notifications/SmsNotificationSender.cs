@@ -4,17 +4,17 @@ using PureCinema.DataAccess.Sms;
 
 namespace PureCinema.Business
 {
-    internal class SmsNotificationSender : INotificationSender
+    public class SmsNotificationSender : INotificationSender
     {
         private ISmsSender _sender;
         private ITemplateRepository _templateRepository;
         private IUserRepository _userRepository;
 
-        public SmsNotificationSender()
+        public SmsNotificationSender(ISmsSender smsSender, ITemplateRepository templateRepository, IUserRepository userRepository)
         {
-            _sender = new MyMobileSmsSender();
-            _templateRepository = new EfTemplateRepository();
-            _userRepository = new EfUserRepository();
+            _sender = smsSender;
+            _templateRepository = templateRepository;
+            _userRepository = userRepository;
         }
 
         public void NotifyReservationReady(int userId, int row, int seatNumber)

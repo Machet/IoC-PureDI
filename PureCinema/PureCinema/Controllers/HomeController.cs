@@ -5,27 +5,31 @@ using PureCinema.Business;
 
 namespace PureCinema.Controllers
 {
-	public class HomeController : Controller
-	{
-		public ActionResult Index()
-		{
-			var service = new MovieService();
-			return View(service.GetMovies(DateTime.Now));
-		}
+    public class HomeController : Controller
+    {
+        private readonly MovieService _movieService;
+
+        public HomeController(MovieService service)
+        {
+            _movieService = service;
+        }
+
+        public ActionResult Index()
+        {
+            return View(_movieService.GetMovies(DateTime.Now));
+        }
 
         [HttpGet]
         public ActionResult ChooseSeat(int movieRoomRelationId)
         {
-            var service = new MovieService();
-            return View(service.GetRoomByRelation(movieRoomRelationId));
+            return View(_movieService.GetRoomByRelation(movieRoomRelationId));
         }
 
         [HttpPost]
         public ActionResult ChooseSeat(int movieRoomRelationId, string seat)
         {
-            var service = new MovieService();
             var seatPosition = seat.Split('_');
-            if (service.ReserveSeat(1, movieRoomRelationId, int.Parse(seatPosition[0]), int.Parse(seatPosition[1])))
+            if (_movieService.ReserveSeat(1, movieRoomRelationId, int.Parse(seatPosition[0]), int.Parse(seatPosition[1])))
             {
                 return RedirectToAction("SeatTaken");
             }

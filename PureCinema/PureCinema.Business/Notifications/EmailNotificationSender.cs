@@ -1,21 +1,20 @@
 ﻿using PureCinema.DataAccess.Models;
 using PureCinema.DataAccess.Repositories;
 using PureCinema.DataAccess.Smtp;
-using System;
 
 namespace PureCinema.Business
 {
-    internal class EmailNotificationSender : INotificationSender
+    public class EmailNotificationSender : INotificationSender
     {
         private IMailSender _sender;
         private ITemplateRepository _templateRepository;
         private IUserRepository _userRepository;
 
-        public EmailNotificationSender()
+        public EmailNotificationSender(IMailSender mailSender, ITemplateRepository templateRepository, IUserRepository userRepository)
         {
-            _sender = new NetMailSender();
-            _templateRepository = new EfTemplateRepository();
-            _userRepository = new EfUserRepository();
+            _sender = mailSender;
+            _templateRepository = templateRepository;
+            _userRepository = userRepository;
         }
 
         public void NotifyReservationReady(int userId, int row, int seatNumber)

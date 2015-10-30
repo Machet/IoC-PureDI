@@ -3,15 +3,15 @@ using PureCinema.DataAccess.Repositories;
 
 namespace PureCinema.Business
 {
-    internal class ApplicationNotificationSender : INotificationSender
+    public class ApplicationNotificationSender : INotificationSender
     {
         private ITemplateRepository _templateRepository;
         private INotificationRepository _notificationRepository;
 
-        public ApplicationNotificationSender()
+        public ApplicationNotificationSender(ITemplateRepository templateRepository, INotificationRepository notificationRepository)
         {
-            _templateRepository = new EfTemplateRepository();
-            _notificationRepository = new EfNotificationRepository();
+            _templateRepository = templateRepository;
+            _notificationRepository = notificationRepository;
         }
 
         public void NotifyReservationReady(int userId, int row, int seatNumber)
