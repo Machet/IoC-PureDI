@@ -1,4 +1,4 @@
-﻿using PureCinema.DataAccess.Models;
+﻿using PureCinema.Business.AuditLogging;
 
 namespace PureCinema.DataAccess.Repositories
 {

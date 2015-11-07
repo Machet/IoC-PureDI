@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PureCinema.Business;
-using PureCinema.DataAccess.Repositories;
 using Moq;
 using System.Collections.Generic;
 using PureCinema.Business.AuditLogging;
-using PureCinema.DataAccess.Models;
+using PureCinema.Business.DTO;
+using PureCinema.Business.Notifications;
 
 namespace PureCinema.Test
 {

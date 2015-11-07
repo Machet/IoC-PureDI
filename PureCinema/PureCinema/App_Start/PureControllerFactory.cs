@@ -1,5 +1,6 @@
 ﻿using PureCinema.Business;
 using PureCinema.Business.AuditLogging;
+using PureCinema.Business.Notifications;
 using PureCinema.Controllers;
 using PureCinema.DataAccess;
 using PureCinema.DataAccess.Repositories;

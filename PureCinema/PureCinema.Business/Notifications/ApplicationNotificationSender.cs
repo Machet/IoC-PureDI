@@ -1,7 +1,4 @@
-﻿using PureCinema.DataAccess.Models;
-using PureCinema.DataAccess.Repositories;
-
-namespace PureCinema.Business
+﻿namespace PureCinema.Business.Notifications
 {
     public class ApplicationNotificationSender : INotificationSender
     {

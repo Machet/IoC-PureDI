@@ -1,4 +1,4 @@
-﻿using PureCinema.DataAccess.Models;
+﻿using PureCinema.Business.Notifications;
 
 namespace PureCinema.DataAccess.Repositories
 {

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
-using PureCinema.DataAccess.Models;
-using PureCinema.DataAccess.DTO;
+using PureCinema.Business;
+using PureCinema.Business.DTO;
 
 namespace PureCinema.DataAccess.Repositories
 {

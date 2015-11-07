@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using PureCinema.DataAccess.DTO;
+using PureCinema.Business.DTO;
 
 namespace PureCinema.DataAccess.Repositories
 {

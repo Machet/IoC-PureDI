@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using PureCinema.Business.AuditLogging;
-using PureCinema.DataAccess.DTO;
-using PureCinema.DataAccess.Models;
-using PureCinema.DataAccess.Repositories;
+using PureCinema.Business.DTO;
+using PureCinema.Business.Notifications;
 
 namespace PureCinema.Business
 {

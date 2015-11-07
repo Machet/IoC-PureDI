@@ -1,4 +1,4 @@
-﻿namespace PureCinema.Business
+﻿namespace PureCinema.Business.Notifications
 {
     public interface INotificationSender
     {

@@ -1,4 +1,4 @@
-﻿using PureCinema.DataAccess.Models;
+﻿using PureCinema.Business;
 using System;
 
 namespace PureCinema.DataAccess.DbSetup

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PureCinema.DataAccess.Models
+namespace PureCinema.Business.AuditLogging
 {
 	public class AuditLog
 	{

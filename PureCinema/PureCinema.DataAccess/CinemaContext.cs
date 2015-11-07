@@ -1,13 +1,15 @@
 ﻿using System.Data.Entity;
 
-using PureCinema.DataAccess.Models;
+using PureCinema.Business.AuditLogging;
+using PureCinema.Business;
+using PureCinema.Business.Notifications;
 
 namespace PureCinema.DataAccess
 {
-	public class CinemaContext : DbContext
-	{
-		public DbSet<AuditLog> AuditLogs { get; set; }
-		public DbSet<Movie> Movies { get; set; }
+    public class CinemaContext : DbContext
+    {
+        public DbSet<AuditLog> AuditLogs { get; set; }
+        public DbSet<Movie> Movies { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<MovieRoomRelation> RoomRelations { get; set; }

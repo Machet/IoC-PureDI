@@ -1,8 +1,4 @@
-﻿using PureCinema.DataAccess.Models;
-using PureCinema.DataAccess.Repositories;
-using PureCinema.DataAccess.Sms;
-
-namespace PureCinema.Business
+﻿namespace PureCinema.Business.Notifications
 {
     public class SmsNotificationSender : INotificationSender
     {

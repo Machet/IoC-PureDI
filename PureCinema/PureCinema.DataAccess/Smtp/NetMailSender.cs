@@ -1,5 +1,4 @@
-﻿using PureCinema.DataAccess.Models;
-using PureCinema.DataAccess.Repositories;
+﻿using PureCinema.Business.Notifications;
 
 namespace PureCinema.DataAccess.Smtp
 {

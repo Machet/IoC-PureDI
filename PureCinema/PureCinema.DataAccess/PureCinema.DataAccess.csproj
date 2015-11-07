@@ -53,43 +53,27 @@
     <Compile Include="DbSetup\MovieTimeSeed.cs" />
     <Compile Include="DbSetup\RoomSeed.cs" />
     <Compile Include="DbSetup\UsersSeed.cs" />
-    <Compile Include="DTO\MovieDTO.cs" />
-    <Compile Include="DTO\RoomDTO.cs" />
-    <Compile Include="DTO\SeanseDTO.cs" />
-    <Compile Include="DTO\SeatDTO.cs" />
-    <Compile Include="Models\AuditLog.cs" />
-    <Compile Include="Models\Movie.cs" />
-    <Compile Include="Models\MovieRoomRelation.cs" />
-    <Compile Include="Models\Notification.cs" />
-    <Compile Include="Models\Room.cs" />
-    <Compile Include="Models\SeatAssignment.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EFAuditRepository.cs" />
     <Compile Include="Repositories\EfNotificationRepository.cs" />
     <Compile Include="Repositories\EfRoomRepository.cs" />
     <Compile Include="Repositories\EfTemplateRepository.cs" />
     <Compile Include="Repositories\EfUserRepository.cs" />
-    <Compile Include="Repositories\IAuditRepository.cs" />
-    <Compile Include="Repositories\IMovieRepository.cs" />
     <Compile Include="Repositories\EfMovieRepository.cs" />
     <Compile Include="DbSetup\MovieSeed.cs" />
-    <Compile Include="Repositories\INotificationRepository.cs" />
-    <Compile Include="Repositories\IRoomRepository.cs" />
-    <Compile Include="Repositories\ITemplateRepository.cs" />
-    <Compile Include="Repositories\IUserRepository.cs" />
-    <Compile Include="Sms\ISmsSender.cs" />
     <Compile Include="Sms\MyMobileSmsSender.cs" />
-    <Compile Include="Sms\SmsSettings.cs" />
-    <Compile Include="Smtp\IMailSender.cs" />
     <Compile Include="Smtp\NetMailSender.cs" />
-    <Compile Include="Smtp\MailSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\PureCinema.Business\PureCinema.Business.csproj">
+      <Project>{0a08ca66-1253-4239-b6f5-9243027f5d7a}</Project>
+      <Name>PureCinema.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
