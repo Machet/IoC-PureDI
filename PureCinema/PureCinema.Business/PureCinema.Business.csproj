@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuditLogging\AuditLogger.cs" />
+    <Compile Include="DomainTime.cs" />
     <Compile Include="Notifications\ApplicationNotificationSender.cs" />
     <Compile Include="Notifications\EmailNotificationSender.cs" />
     <Compile Include="Notifications\INotificationSender.cs" />

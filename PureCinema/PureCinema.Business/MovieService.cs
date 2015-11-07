@@ -45,7 +45,7 @@ namespace PureCinema.Business
                 return false;
             }
 
-            if (relation.StartTime < DateTime.Now.TimeOfDay)
+            if (relation.StartTime < DomainTime.Current.Now.TimeOfDay)
             {
                 return false;
             }
